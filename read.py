@@ -35,3 +35,19 @@ for k in data:
 		good.append(k)
 
 print('一共有', len(good), '筆留言包含 good')
+
+
+# 進階寫法 (初學先不要接觸)
+good = [k for k in data if 'good' in k]
+# 第一個 k 就是 good.append(k)
+# 假如 good.append(k) 改成 good.append(1) ---> 會有兩萬多個1
+good = [1 for k in data if 'good' in k]
+
+bad = ['bad' in k for k in data] # 留言是否有提到bad
+
+ 
+
+
+
+
+
