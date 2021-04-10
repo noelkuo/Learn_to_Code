@@ -1,5 +1,15 @@
+# 讀取檔案
 products = []
 
+with open('products.csv', 'r') as f:
+	for line in f:
+		if '商品,價格' in line:
+			continue #繼續 ; break: 跳出
+		name, price = line.strip().split(',')   # split做切割，但記得還有換行的符號
+		products.append([name, price])
+print(products)
+
+# 讓使用者輸入
 while True:
 	name = input('請輸入商品名稱: ')
 	if name == 'q': # exit
@@ -9,8 +19,7 @@ while True:
 
 	products.append([name, price])
 
-print(products)
-
+# 列印商品價格
 for p in products:
 	# print(p) # 個別清單
 	# print(p[0]) # 清單的商品名
