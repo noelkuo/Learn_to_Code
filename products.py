@@ -11,10 +11,12 @@ while True:
 
 	# p = [name, price]
 	# products.append(p)
-	
+
 	products.append([name, price])
 
-
 print(products)
-print(products[0]) # 大清單的第一格
-print(products[0][0]) # 大清單中的第一格 --> 小清單的第一格
+
+for p in products:
+	# print(p) # 個別清單
+	# print(p[0]) # 清單的商品名
+	print(p[0], '的價格是', p[1], '元') # 清單的商品名
